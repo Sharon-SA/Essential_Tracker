@@ -11,11 +11,12 @@ month_choice = [(
 
 class Expense(models.Model):
     payment_type = [('CH', 'Cash'), ('CR', 'Credit'), ('DB', 'Debit')]
+
     month = models.CharField(max_length=10, choices=month_choice)
     store = models.CharField(max_length=50)
     classification = models.CharField(max_length=50)
     items = models.TextField()
-    method_of_payment = models.CharField(max_length=10, choices=payment_type)
+    mop = models.CharField(max_length=10, choices=payment_type)
     amount = models.DecimalField(max_digits=100, decimal_places=2)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

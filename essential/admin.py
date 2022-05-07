@@ -6,7 +6,7 @@ from .models import Expense, Income, Report
 @admin.register(Expense)
 class PostAdmin(admin.ModelAdmin):
     list_display = (
-        'month', 'store', 'classification', 'items', 'method_of_payment', 'amount')
+        'month', 'store', 'classification', 'items', 'mop', 'amount')
 
 @admin.register(Income)
 class PostAdmin(admin.ModelAdmin):
