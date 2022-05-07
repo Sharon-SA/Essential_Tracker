@@ -1,0 +1,15 @@
+{% extends "essential/base.html" %}
+{% load static %}
+{% block body_block %}
+    <h1>Delete {{ expense.month }}?</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Delete">
+        <a href="{% url 'essential:home' pk=expenses.amount %} ">Cancel</a>
+
+    </form>
+
+{% endblock %}
+
+</html>
